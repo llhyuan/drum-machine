@@ -3,7 +3,7 @@ export const buttons = {
     {
       label: 'Q',
       name: 'Heater 1',
-      source: '/heater/Heater-1.mp3',
+      source: 'https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3',
     },
     {
       label: 'W',
