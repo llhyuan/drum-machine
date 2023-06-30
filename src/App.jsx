@@ -43,13 +43,13 @@ function App() {
     <div className='flex justify-center items-center w-full min-h-[100vh] bg-[#E5E6E7] overflow-hidden'>
       <div
         id='drum-machine'
-        className='w-[80%] min-w-[500px] drum-machine border-black border-solid border-[0.6rem] rounded-3xl shadow-clear translate-x-0 lg:max-w-[1170px] my-8'
+        className='w-[88%] drum-machine border-black border-solid border-[0.6rem] rounded-3xl shadow-clear translate-x-0 lg:max-w-[1170px] my-8'
       >
-        <div className='banner-top flex flex-col relative h-24 overflow-hidden '>
+        <div className='banner-top flex flex-col relative h-[4.5rem] overflow-hidden '>
           <div className='h-24 w-full bg-[#D4D5D9] relative top-[12px] rounded-tl-3xl '></div>
           <button
             className={
-              'absolute top-[1.7rem] right-10 w-8 h-8 rounded-full ' +
+              'absolute top-[1.2rem] right-10 w-6 h-6 rounded-full ' +
               (power
                 ? 'bg-green-500 shadow-powerOn'
                 : 'bg-red-500 shadow-powerOff')
@@ -65,7 +65,7 @@ function App() {
             }}
           ></button>
 
-          <div className='border-b-[0.4rem] border-solid border-black h-[1.1rem] w-full mt-auto bg-[#B9BBC1] z-10'></div>
+          <div className='border-b-[0.4rem] border-solid border-black h-[1.5rem] w-full mt-auto bg-[#B9BBC1] z-10'></div>
         </div>
         <div className='text-[3.5rem] text-[#444444] md:flex lg:justify-around'>
           <div className='pad flex flex-wrap gap-6 w-[80%] mx-auto my-16 md:mx-4 md:w-full lg:max-w-[550px]'>
@@ -104,7 +104,7 @@ function App() {
             <div className='flex justify-between my-4'>
               <button
                 className={
-                  'text-[1.5rem] px-4 py-2 bg-[#BABABA] border-solid border-[0.25rem] border-[#444444] active:shadow-buttonPressed active:translate-y-[-1] mx-auto ' +
+                  'text-[1.5rem] sm:text-[2rem] px-4 py-2 bg-[#BABABA] border-solid border-[0.25rem] border-[#444444] active:shadow-buttonPressed active:translate-y-[-1] mx-auto ' +
                   (activeKit === 'heater'
                     ? 'shadow-buttonPressed'
                     : 'shadow-button')
@@ -127,7 +127,7 @@ function App() {
               </button>
               <button
                 className={
-                  'text-[1.5rem] px-4 py-2 bg-[#BABABA] border-solid border-[0.25rem] border-[#444444] active:shadow-buttonPressed active:translate-y-[-1] transition-all duration-100 ease-out mx-auto ' +
+                  'text-[1.5rem] sm:text-[2rem] px-4 py-2 bg-[#BABABA] border-solid border-[0.25rem] border-[#444444] active:shadow-buttonPressed active:translate-y-[-1] transition-all duration-100 ease-out mx-auto ' +
                   (activeKit === 'piano'
                     ? 'shadow-buttonPressed'
                     : 'shadow-button')
@@ -152,9 +152,9 @@ function App() {
           </div>
         </div>
         <div className='banner-bottom flex flex-col h-12 overflow-hidden '>
-          <div className='border-[0.3rem] border-solid border-black h-1 w-full mb-auto'></div>
+          <div className='border-[0.3rem] border-solid border-black h-1 w-full mb-auto bg-black'></div>
 
-          <div className='h-7 w-full bg-[#D4D5D9] relative rounded-b-2xl'></div>
+          <div className='h-7 w-full relative rounded-b-2xl'></div>
         </div>
       </div>
     </div>

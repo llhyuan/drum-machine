@@ -25,7 +25,7 @@ export default function Drumpad({
 
     return (
     <button
-      className='drum-pad block w-[25%] aspect-[8/9] text-[2.6rem] py-1 px-5 bg-[#BABABA] border-solid border-[0.3rem] border-[#444444] shadow-button active:shadow-buttonPressed active:translate-y-[-1] mx-auto'
+      className='drum-pad block w-[25%] aspect-[8/9] text-[2rem] sm:text-[2.8rem] py-1 px-auto bg-[#BABABA] border-solid border-[0.3rem] border-[#444444] shadow-button active:shadow-buttonPressed active:translate-y-[-1] mx-auto'
       onClick={(e) => {
         e.currentTarget.firstElementChild.pause();
         e.currentTarget.firstElementChild.currentTime = 0;
