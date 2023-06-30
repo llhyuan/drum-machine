@@ -3,47 +3,47 @@ export const buttons = {
     {
       label: 'Q',
       name: 'Heater 1',
-      source: '/src/assets/heater/Heater-1.mp3',
+      source: '/heater/Heater-1.mp3',
     },
     {
       label: 'W',
       name: 'Heater 2',
-      source: '/src/assets/heater/Heater-2.mp3',
+      source: '/heater/Heater-2.mp3',
     },
     {
       label: 'E',
       name: 'Heater 3',
-      source: '/src/assets/heater/Heater-3.mp3',
+      source: '/heater/Heater-3.mp3',
     },
     {
       label: 'A',
       name: 'Heater 4',
-      source: '/src/assets/heater/Heater-4_1.mp3',
+      source: '/heater/Heater-4_1.mp3',
     },
     {
       label: 'S',
       name: 'Clap',
-      source: '/src/assets/heater/Heater-6.mp3',
+      source: '/heater/Heater-6.mp3',
     },
     {
       label: 'D',
       name: 'Open HH',
-      source: '/src/assets/heater/Dsc_Oh.mp3',
+      source: '/heater/Dsc_Oh.mp3',
     },
     {
       label: 'Z',
       name: "'Kick'n Hat",
-      source: '/src/assets/heater/Kick_n_Hat.mp3',
+      source: '/heater/Kick_n_Hat.mp3',
     },
     {
       label: 'X',
       name: 'Kick',
-      source: '/src/assets/heater/RP4_KICK_1.mp3',
+      source: '/heater/RP4_KICK_1.mp3',
     },
     {
       label: 'C',
       name: 'Closed HH',
-      source: '/src/assets/heater/Cev_H2.mp3',
+      source: '/heater/Cev_H2.mp3',
     },
   ],
   piano: [
