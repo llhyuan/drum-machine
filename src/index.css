@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type='range'] {
+  appearance: none;
+  background: none;
+  width: 100%;
+}
+input[type='range']:focus {
+  outline: none;
+}
+input[type='range']::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1.5rem;
+  cursor: pointer;
+  background: #a9a9a9;
+
+  box-shadow: 2px 12px 20px #a9a9a9;
+}
+input[type='range']::-webkit-slider-thumb {
+  height: 2.5rem;
+  width: 1.3rem;
+  border-radius: 0;
+  background: #288ba8;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -8px;
+
+  box-shadow: 2px 12px 20px #a9a9a9;
+}
+input[type='range']:focus::-webkit-slider-runnable-track {
+  background: #a9a9a9;
+
+  box-shadow: 2px 12px 20px #a9a9a9;
+}
+input[type='range']::-moz-range-track {
+  width: 100%;
+  height: 1.5rem;
+  cursor: pointer;
+  background: #a9a9a9;
+  box-shadow: 2px 12px 20px #a9a9a9;
+}
+input[type='range']::-moz-range-thumb {
+  height: 2.5rem;
+  border: none;
+  border-radius: 0;
+  width: 1.3rem;
+  background: #288ba8;
+  cursor: pointer;
+
+  box-shadow: 2px 12px 20px #a9a9a9;
+}
+input[type='range']::-ms-track {
+  width: 100%;
+  height: 1.5rem;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+
+  box-shadow: 2px 12px 20px #a9a9a9;
+}
+
+input[type='range']::-ms-thumb {
+  height: 2.5rem;
+  width: 1.3rem;
+  border-radius: 0;
+  background: #288ba8;
+  cursor: pointer;
+
+  box-shadow: 2px 12px 20px #a9a9a9;
+}
+
+@keyframes screenOff {
+  0% {
+    aspect-ratio: 17/5;
+    width:100%;
+  }
+  50% {
+    aspect-ratio: 170/2;
+    wodth:100%;
+  }
+  100% {
+    aspect-ratio: 170/2;
+    width: 0;
+  }
+}
+@keyframes screenOn {
+  0% {
+    width: 0;
+    aspect-ratio: 170/2;
+  }
+  50% {
+    width: 100%;
+    aspect-ratio: 170/2;
+  }
+  100% {
+    width:100%;
+    aspect-ratio: 17/5;
+  }
+}
+
+.off {
+  animation-name: screenOff;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+.on {
+  animation-name: screenOn;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
