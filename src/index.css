@@ -78,7 +78,7 @@ input[type='range']::-ms-thumb {
   }
   50% {
     aspect-ratio: 170/2;
-    wodth:100%;
+    width:100%;
   }
   100% {
     aspect-ratio: 170/2;

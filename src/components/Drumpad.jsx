@@ -1,7 +1,6 @@
-import { useEffect } from 'react';
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-export default function Button({
+export default function Drumpad({
   label,
   name,
   source,
@@ -12,6 +11,7 @@ export default function Button({
   setDisplay,
 }) {
   const audioRef = useRef(null);
+  const [url, setUrl] = useState(source);
 
   useEffect(() => {
     audioRef.current.volume = volume;
@@ -24,9 +24,14 @@ export default function Button({
     }
   }, [volume, keypressed, name, label, setDisplay, setKeyPressed]);
 
+  useEffect(()=>{
+    import(source).then((res)=>{
+      setUrl(res.default);
+    })
+  }, [source])
   return (
     <button
-      className='block w-[25%] aspect-[8/9] text-[2.6rem] py-1 px-5 bg-[#BABABA] border-solid border-[0.3rem] border-[#444444] shadow-button active:shadow-buttonPressed active:translate-y-[-1] mx-auto'
+      className='drum-pad block w-[25%] aspect-[8/9] text-[2.6rem] py-1 px-5 bg-[#BABABA] border-solid border-[0.3rem] border-[#444444] shadow-button active:shadow-buttonPressed active:translate-y-[-1] mx-auto'
       onClick={(e) => {
         e.currentTarget.firstElementChild.pause();
         e.currentTarget.firstElementChild.currentTime = 0;
@@ -35,7 +40,7 @@ export default function Button({
       }}
     >
       {label}
-      <audio id={label} ref={audioRef} src={source} muted={!power}></audio>
+      <audio id={label} ref={audioRef} src={source} muted={!power} className='clip'></audio>
     </button>
   );
 }

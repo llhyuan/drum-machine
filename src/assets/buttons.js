@@ -3,17 +3,17 @@ export const buttons = {
     {
       label: 'Q',
       name: 'Heater 1',
-      source: '/drum-machine/src/assets/heater/Heater-1.mp3',
+      source: '/src/assets/heater/Heater-1.mp3',
     },
     {
       label: 'W',
       name: 'Heater 2',
-      source: '/drum-machine/src/assets/heater/Heater-2.mp3',
+      source: '/src/assets/heater/Heater-2.mp3',
     },
     {
       label: 'E',
       name: 'Heater 3',
-      source: '/drum-machine/src/assets/heater/Heater-3.mp3',
+      source: '/src/assets/heater/Heater-3.mp3',
     },
     {
       label: 'A',

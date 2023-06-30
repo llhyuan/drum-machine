@@ -1,6 +1,6 @@
-import Button from './components/Button';
+import Drumpad from './components/Drumpad.jsx';
 import { buttons } from './assets/buttons.js';
-import Screen from './assets/Screen';
+import Screen from './components/Screen.jsx';
 import { useState, useEffect } from 'react';
 
 function App() {
@@ -43,7 +43,7 @@ function App() {
     <div className='flex justify-center items-center w-full min-h-[100vh] bg-[#E5E6E7] overflow-hidden'>
       <div
         id='drum-machine'
-        className='w-[80%] min-w-[500px] drum-machine border-black border-solid border-[0.6rem] rounded-3xl shadow-clear translate-x-0 lg:max-w-[1170px]'
+        className='w-[80%] min-w-[500px] drum-machine border-black border-solid border-[0.6rem] rounded-3xl shadow-clear translate-x-0 lg:max-w-[1170px] my-8'
       >
         <div className='banner-top flex flex-col relative h-24 overflow-hidden '>
           <div className='h-24 w-full bg-[#D4D5D9] relative top-[12px] rounded-tl-3xl '></div>
@@ -71,7 +71,7 @@ function App() {
           <div className='pad flex flex-wrap gap-6 w-[80%] mx-auto my-16 md:mx-4 md:w-full lg:max-w-[550px]'>
             {source.map((button) => {
               return (
-                <Button
+                <Drumpad
                   key={button.label}
                   label={button.label}
                   name={button.name}
